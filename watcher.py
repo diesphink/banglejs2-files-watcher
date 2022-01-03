@@ -67,12 +67,14 @@ async def main(address, files, verbose, buffer_size, exec):
             await send_load(exec)
 
         async for changes in awatch('.'):
+            any_upload = False
             for (type, file_changed) in changes:
                 if (type != Change.deleted):
                     for file in files:
                         if os.path.samefile(file_changed, file):
+                            any_upload = True
                             await send_file(file)
-            if exec:
+            if exec and any_upload:
                 await send_load(exec)
 
 if __name__ == "__main__":
