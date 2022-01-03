@@ -1,10 +1,8 @@
 import asyncio
-from os import sendfile
 import os
 import logging
 import argparse
 from bleak import BleakClient
-from watchgod import watch
 from watchgod.main import awatch
 from watchgod.watcher import Change
 import base64
@@ -53,9 +51,9 @@ async def main(address, files, verbose, buffer_size, exec):
 
     async with BleakClient(address) as client:
         logger.info("Connected")
-        logger.info(f"Resetting")
+        logger.info("Resetting")
         await send_command(b"reset();\n")
-        logger.info(f"Disabling echo")
+        logger.info("Disabling echo")
         await send_command(b"echo(0);\n")
         await asyncio.sleep(1)
         await client.start_notify(UUID_NORDIC_RX, uart_data_received)
@@ -98,6 +96,6 @@ if __name__ == "__main__":
 
     try:
         asyncio.run(main(args.address, args.files, verbose=args.verbose,
-                buffer_size=args.buffer_size, exec=args.exec))
+                         buffer_size=args.buffer_size, exec=args.exec))
     except KeyboardInterrupt:
         logging.root.info("Interrupted. Ending watcher")
