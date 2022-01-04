@@ -39,7 +39,7 @@ async def main(address, files, verbose, buffer_size, exec):
         with open(file, "rb") as f:
             content = f.read()
             atob = base64.b64encode(content)
-            command = f'require("Storage").write("{file}",atob("{str(atob, "utf-8")}"));\n'
+            command = f'require("Storage").write("{os.path.basename(file)}",atob("{str(atob, "utf-8")}"));\n'
             await send_command(command.encode("utf-8"))
 
         await send_command(b'\n')
