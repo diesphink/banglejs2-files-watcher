@@ -12,7 +12,7 @@ UUID_NORDIC_TX = "6e400002-b5a3-f393-e0a9-e50e24dcca9e"
 UUID_NORDIC_RX = "6e400003-b5a3-f393-e0a9-e50e24dcca9e"
 
 
-async def main(address, files, verbose, buffer_size, exec):
+async def main(address, files, verbose, buffer_size, exec, skip):
     logger = logging.root
     logger.info(f"Connecting to {address}...")
 
@@ -58,11 +58,12 @@ async def main(address, files, verbose, buffer_size, exec):
         await asyncio.sleep(1)
         await client.start_notify(UUID_NORDIC_RX, uart_data_received)
 
-        for file in files:
-            await send_file(file)
+        if not skip:
+            for file in files:
+                await send_file(file)
 
-        if exec:
-            await send_load(exec)
+            if exec:
+                await send_load(exec)
 
         async for changes in awatch('.'):
             any_upload = False
@@ -88,6 +89,8 @@ if __name__ == "__main__":
         '--exec', help='script to run (load) after each upload')
     parser.add_argument('-v', '--verbose',
                         action='store_true', help="verbosity: -v show response from bangle, -vv show all DEBUG logs")
+    parser.add_argument('-s', '--skip',
+                        action='store_true', help="skip first upload of files, just monitor for changes")
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.DEBUG if args.verbose == 2 else logging.INFO,
@@ -96,6 +99,6 @@ if __name__ == "__main__":
 
     try:
         asyncio.run(main(args.address, args.files, verbose=args.verbose,
-                         buffer_size=args.buffer_size, exec=args.exec))
+                         buffer_size=args.buffer_size, exec=args.exec, skip=args.skip))
     except KeyboardInterrupt:
         logging.root.info("Interrupted. Ending watcher")
