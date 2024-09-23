@@ -1,0 +1,226 @@
+{
+  "lockfile_version": "1",
+  "packages": {
+    "python311@latest": {
+      "last_modified": "2024-06-12T20:55:33Z",
+      "plugin_version": "0.0.3",
+      "resolved": "github:NixOS/nixpkgs/a9858885e197f984d92d7fe64e9fff6b2e488d40#python3",
+      "source": "devbox-search",
+      "version": "3.11.9",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/327bf08j5b7l9cnzink3g4vp32y5352j-python3-3.11.9",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/327bf08j5b7l9cnzink3g4vp32y5352j-python3-3.11.9"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/q3x28mimkawkdjlvd78jxv3s0fk25vz8-python3-3.11.9",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/kl8hjhf6x7dz7brs1ylkxy26qb8argaq-python3-3.11.9-debug"
+            }
+          ],
+          "store_path": "/nix/store/q3x28mimkawkdjlvd78jxv3s0fk25vz8-python3-3.11.9"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/9lcbaggnygcqpgzakib5lwisks8gnn5i-python3-3.11.9",
+              "default": true
+            }
+          ],
+          "store_path": "/nix/store/9lcbaggnygcqpgzakib5lwisks8gnn5i-python3-3.11.9"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6b1fqdwb3g56j5pazv8zkx9qd0mv3wiz-python3-3.11.9",
+              "default": true
+            },
+            {
+              "name": "debug",
+              "path": "/nix/store/61rzpp3v8dsf6h17h3jnnwlm5hwc2brr-python3-3.11.9-debug"
+            }
+          ],
+          "store_path": "/nix/store/6b1fqdwb3g56j5pazv8zkx9qd0mv3wiz-python3-3.11.9"
+        }
+      }
+    },
+    "python311Packages.bleak@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#python311Packages.bleak",
+      "source": "devbox-search",
+      "version": "0.22.2",
+      "systems": {
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/j0ks2855n5ipwwcbbqflc3ppn65zfly7-python3.11-bleak-0.22.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/2qn6ig2jrr6lfxnki8z1ri0nnlmhdmlh-python3.11-bleak-0.22.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/j0ks2855n5ipwwcbbqflc3ppn65zfly7-python3.11-bleak-0.22.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/b3q114x2f7waii2rd59ym5092lfbhdys-python3.11-bleak-0.22.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/gz42cwyxv82pnxwcr1g15hilrcnyklwz-python3.11-bleak-0.22.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/b3q114x2f7waii2rd59ym5092lfbhdys-python3.11-bleak-0.22.2"
+        }
+      }
+    },
+    "python311Packages.dbus-next@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#python311Packages.dbus-next",
+      "source": "devbox-search",
+      "version": "0.2.3",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/byxfxwb4996kbc8xqn0c0jr3if6p0in4-python3.11-dbus-next-0.2.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/qcpq2jm6ask9czcjpj6pg3lxn1ykkgi2-python3.11-dbus-next-0.2.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/byxfxwb4996kbc8xqn0c0jr3if6p0in4-python3.11-dbus-next-0.2.3"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/2hihgk5f2vxs1bpzd4v0cljyv7g2fm9n-python3.11-dbus-next-0.2.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/ki5fdp5rbzgbsf6wcxng09c4dm7hsc49-python3.11-dbus-next-0.2.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/2hihgk5f2vxs1bpzd4v0cljyv7g2fm9n-python3.11-dbus-next-0.2.3"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/0axz6jnmq7b82mak5g73grkkqq5qycmb-python3.11-dbus-next-0.2.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/slckbpbnb6w3100q2gn7537g0cs9d7ck-python3.11-dbus-next-0.2.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/0axz6jnmq7b82mak5g73grkkqq5qycmb-python3.11-dbus-next-0.2.3"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/86hll41ig1i0bnp2d9jl2clymh4shnw5-python3.11-dbus-next-0.2.3",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/mvay63pivmas93mgpg6w31vkiybgwxis-python3.11-dbus-next-0.2.3-dist"
+            }
+          ],
+          "store_path": "/nix/store/86hll41ig1i0bnp2d9jl2clymh4shnw5-python3.11-dbus-next-0.2.3"
+        }
+      }
+    },
+    "python311Packages.watchgod@latest": {
+      "last_modified": "2024-09-10T15:01:03Z",
+      "resolved": "github:NixOS/nixpkgs/5ed627539ac84809c78b2dd6d26a5cebeb5ae269#python311Packages.watchgod",
+      "source": "devbox-search",
+      "version": "0.8.2",
+      "systems": {
+        "aarch64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/clclwxvy0q4kvl266a5f4wr7j7sanhhq-python3.11-watchgod-0.8.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/1ahxj84qdi0msqss7k8fxbi1v5855xjh-python3.11-watchgod-0.8.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/clclwxvy0q4kvl266a5f4wr7j7sanhhq-python3.11-watchgod-0.8.2"
+        },
+        "aarch64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/6i21gq9jyyhmdk5vrwdb8lxhwa7aa06m-python3.11-watchgod-0.8.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/r9ssxd5lylgnkxh44zhn1vcgm3rlvb50-python3.11-watchgod-0.8.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/6i21gq9jyyhmdk5vrwdb8lxhwa7aa06m-python3.11-watchgod-0.8.2"
+        },
+        "x86_64-darwin": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/lvdx4ca6jzg4vc40gz3vbhd6mfwiydrx-python3.11-watchgod-0.8.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/973bi44360q5a7r6m6ky8b9ba0gv7xcm-python3.11-watchgod-0.8.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/lvdx4ca6jzg4vc40gz3vbhd6mfwiydrx-python3.11-watchgod-0.8.2"
+        },
+        "x86_64-linux": {
+          "outputs": [
+            {
+              "name": "out",
+              "path": "/nix/store/478gja7skfi8kh9p77hcsspbn35xjzpj-python3.11-watchgod-0.8.2",
+              "default": true
+            },
+            {
+              "name": "dist",
+              "path": "/nix/store/1q1bpn8jk6ccz1zmia3ca2dca97910l6-python3.11-watchgod-0.8.2-dist"
+            }
+          ],
+          "store_path": "/nix/store/478gja7skfi8kh9p77hcsspbn35xjzpj-python3.11-watchgod-0.8.2"
+        }
+      }
+    }
+  }
+}
