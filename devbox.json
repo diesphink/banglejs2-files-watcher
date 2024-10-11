@@ -11,8 +11,9 @@
       "echo 'Welcome to devbox!' > /dev/null"
     ],
     "scripts": {
-      "test": [
-        "echo \"Error: no test specified\" && exit 1"
+      "sync": [
+        "curl 'wttr.in/sorocaba?format=j1' | jq \"[.weather[] | {hourly:[.hourly[] | {tempC: .tempC|tonumber, chanceofrain: .chanceofrain|tonumber, weatherDesc: .weatherDesc[0].value, weatherCode: .weatherCode | tonumber}], date, mintempC: .mintempC | tonumber, maxtempC: .maxtempC|tonumber, avgtempC: .avgtempC | tonumber}]\" > weather.json",
+        "python watcher.py 'f2:dc:a8:e1:41:35' weather.json"
       ]
     }
   }

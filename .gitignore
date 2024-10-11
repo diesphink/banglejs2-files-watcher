@@ -1,1 +1,5 @@
 /venv/
+.venv
+.vscode/data
+.vscode/extensions
+weather.json
