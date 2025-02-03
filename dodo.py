@@ -11,6 +11,7 @@ logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
+    filename="dodo.log",
 )
 
 logger = logging.root
@@ -19,6 +20,8 @@ logger = logging.root
 def download_weather_data():
     # Versão bash+jq do mesmo processo:
     # 'curl "wttr.in/sorocaba?format=j1" | jq "[.weather[] | {hourly:[.hourly[] | {tempC: .tempC|tonumber, chanceofrain: .chanceofrain|tonumber, weatherDesc: .weatherDesc[0].value, weatherCode: .weatherCode | tonumber}], date, mintempC: .mintempC | tonumber, maxtempC: .maxtempC|tonumber, avgtempC: .avgtempC | tonumber}]" > weather.json',
+
+    logging.info("Downloading weather data")
 
     url = "https://wttr.in/sorocaba"
     params = {"format": "j1"}
@@ -62,9 +65,8 @@ def task_download_data():
 
 
 def run_sync():
-    asyncio.run(
-        main("f2:dc:a8:e1:41:35", ["weather.json"], True, 20, "sphclock.app.js")
-    )
+    logging.info("Syncing data")
+    asyncio.run(main("f2:dc:a8:e1:41:35", ["weather.json"], 0, 20, "sphclock.app.js"))
 
 
 def task_sync():

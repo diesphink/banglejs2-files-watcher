@@ -57,8 +57,8 @@ async def main(address, files, verbose, buffer_size, exec):
         await send_command(f"setTime({ time.time() });\n".encode("utf-8"))
         # logger.info("Resetting")
         # await send_command(b"reset();\n")
-        # logger.info("Disabling echo")
-        # await send_command(b"echo(0);\n")
+        logger.info("Disabling echo")
+        await send_command(b"echo(0);\n")
         await asyncio.sleep(1)
         await client.start_notify(UUID_NORDIC_RX, uart_data_received)
 
@@ -67,6 +67,8 @@ async def main(address, files, verbose, buffer_size, exec):
 
         if exec:
             await send_load(exec)
+
+        logger.info("Done")
 
 
 if __name__ == "__main__":
