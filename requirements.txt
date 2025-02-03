@@ -1,3 +1,5 @@
-bleak==0.13.0
-dbus-next==0.2.3
-watchgod==0.7
+bleak
+dbus-next
+watchgod
+requests
+doit
