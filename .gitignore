@@ -3,3 +3,5 @@
 .vscode/data
 .vscode/extensions
 weather.json
+__pycache__
+.doit.db
