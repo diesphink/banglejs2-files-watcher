@@ -1,0 +1,11 @@
+[env]
+_.python.venv = { path = ".venv", create = true }
+VSCODE_PROFILES = "common python"
+
+[tools]
+python = "3.13"
+
+[tasks.install]
+description = "Install dependencies"
+alias = "i"
+run = "uv pip install -r requirements.txt"
