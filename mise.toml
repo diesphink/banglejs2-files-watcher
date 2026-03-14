@@ -1,9 +1,13 @@
 [env]
-_.python.venv = { path = ".venv", create = true }
+_.python.venv = { path = ".venv" }
 VSCODE_PROFILES = "common python"
 
 [tools]
 python = "3.13"
+uv = "latest"
+
+[prepare.uv]
+auto = true
 
 [tasks.install]
 description = "Install dependencies"
